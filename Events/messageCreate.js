@@ -2,7 +2,6 @@ const Discord = require('discord.js');
 const config = require('../config.json');
 
 module.exports = async (client, message) => {
-    console.log(client.commandsList)
     const prefix = config.prefix;
 
     if(!message.content.startsWith(prefix)) return;
