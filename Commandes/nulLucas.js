@@ -22,9 +22,18 @@ module.exports = {
     description: 'Dit si quelqu\'un est nul',
     category: 'Fun',
     usage: '[prefix]nul <@user>',
+    options : [
+        {
+            type: "user",
+            name: "user",
+            description: "L'utilisateur dont vous voulez dire qu'il est nul",
+            required: false
+        }
+    ],
 
     async run(client, message, args) {
-        let user = message.mentions.users.first() || message.author;
-        await message.channel.send(`<@${user.id}> ${random.randomChoice(list)} !`);
+        let user = message.member.id;
+        if(args[0]) user = args[0].value;
+        await message.reply(`<@${user}> ${random.randomChoice(list)} !`);
     }
 }
