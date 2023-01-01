@@ -12,7 +12,7 @@ const randomChoice = (array, prob) => {
     defaultChoice = array[Math.floor(Math.random() * array.length)]
 
     // Si il n'y a pas de probabilité, on retourne le choix par défaut
-    if(prob !== null) return defaultChoice;
+    if(prob == null) return defaultChoice;
 
     // Si il y a une probabilité, on vérifie que le tableau de probabilité est valide
     if(Array.isArray(prob) === false){
@@ -41,6 +41,9 @@ const randomChoice = (array, prob) => {
         current += prob[i];
         if(rand < current) return array[i];
     }
+
+    // Si on arrive ici, c'est que la probabilité n'a pas été calculée
+    return array[array.length - 1];
 }
 
 module.exports = randomChoice;
