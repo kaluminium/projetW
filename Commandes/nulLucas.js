@@ -1,4 +1,4 @@
-const randomChoice = require("../Utils/Random/randomChoice");
+const random = require('../Utils/Random')
 const list = [
     "est nul",
     "est un gros nul",
@@ -17,13 +17,11 @@ const list = [
     "pue très fort"
 ]
 
-randomChoice
-
 module.exports = {
     name: 'nul',
 
     async run(client, message, args) {
         let user = message.mentions.users.first() || message.author;
-        await message.channel.send(`<@${user.id}> ${randomChoice(list)} !`);
+        await message.channel.send(`<@${user.id}> ${random.randomChoice(list)} !`);
     }
 }
