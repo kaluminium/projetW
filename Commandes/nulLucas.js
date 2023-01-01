@@ -19,6 +19,9 @@ const list = [
 
 module.exports = {
     name: 'nul',
+    description: 'Dit si quelqu\'un est nul',
+    category: 'Fun',
+    usage: '[prefix]nul <@user>',
 
     async run(client, message, args) {
         let user = message.mentions.users.first() || message.author;
