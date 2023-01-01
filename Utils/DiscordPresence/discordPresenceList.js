@@ -12,6 +12,14 @@ const discordPresenceList = [
     {
         type : ActivityType.Watching,
         name : 'Je pète partout'
+    },
+    {
+        type : ActivityType.Watching,
+        name : 'w!help pour plus d\'info'
+    },
+    {
+        type : ActivityType.Watching,
+        name : 'développé par Lucas et Luka <3'
     }
 ]
 
