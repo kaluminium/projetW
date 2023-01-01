@@ -1,1 +1,1 @@
-module.exports.randomChoice = require("./randomChoice.js");
+exports.randomChoice = require("./randomChoice.js");
