@@ -25,5 +25,5 @@ module.exports = async client => {
     const rest = new REST({ version: '10' }).setToken(config.token);
 
     await rest.put(Routes.applicationCommands(client.user.id), { body: commands })
-    .then(() => console.log('Les slash commands ont été chargées avec succès'))
+    .then(() => console.log('Les slash commands ont été chargées avec succès\n'))
 }

@@ -6,4 +6,5 @@ module.exports = async client => {
         client.on(file.split('.js').join(''), event.bind(null, client));
         console.log(`Event chargé: ${file.split('.js').join('')}`);
     })
+    console.log('')
 }

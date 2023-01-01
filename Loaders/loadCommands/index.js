@@ -15,4 +15,5 @@ module.exports = async client => {
 
         console.log(`Commande chargée: ${command.name}`);
     })
+    console.log('')
 }
