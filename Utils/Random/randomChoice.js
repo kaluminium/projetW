@@ -9,7 +9,7 @@ const randomChoice = (array, prob) => {
     if(Array.isArray(array) === false) return null;
 
     // Choix par défaut (si il n'y a pas de probabilité)
-    defaultChoice = array[Math.floor(Math.random() * array.length)]
+    let defaultChoice = array[Math.floor(Math.random() * array.length)]
 
     // Si il n'y a pas de probabilité, on retourne le choix par défaut
     if(prob == null) return defaultChoice;
