@@ -30,7 +30,7 @@ module.exports = {
         }
         else {
             let command = client.commands.get(args[0].value);
-            if(!command) return message.channel.send('Cette commande n\'existe pas');
+            if(!command) return message.reply('Cette commande n\'existe pas');
 
             const embed = new Discord.EmbedBuilder()
             .setColor('#0099ff')
