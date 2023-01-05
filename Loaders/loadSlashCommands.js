@@ -2,6 +2,7 @@ const Discord = require('discord.js');
 const { REST } = require('@discordjs/rest');
 const { Routes } = require('discord-api-types/v10');
 const config = require('../config.json');
+require("dotenv").config();
 
 module.exports = async client => {
 
@@ -22,7 +23,7 @@ module.exports = async client => {
         await commands.push(slashCommand);
     })
 
-    const rest = new REST({ version: '10' }).setToken(config.token);
+    const rest = new REST({ version: '10' }).setToken(process.env.BOT_TOKEN);
 
     await rest.put(Routes.applicationCommands(client.user.id), { body: commands })
     .then(() => console.log('Les slash commands ont été chargées avec succès\n'))
